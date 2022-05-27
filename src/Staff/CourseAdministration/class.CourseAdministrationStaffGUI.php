@@ -18,6 +18,7 @@ use srag\Plugins\SrLpReport\Staff\AbstractStaffTableGUI;
  * @ilCtrl_isCalledBy srag\Plugins\SrLpReport\Staff\CourseAdministration\CourseAdministrationStaffGUI: srag\Plugins\SrLpReport\Staff\StaffGUI
  * @ilCtrl_isCalledBy srag\CustomInputGUIs\SrLpReport\MultiSelectSearchNewInputGUI\OrgUnitAjaxAutoCompleteCtrl: srag\Plugins\SrLpReport\Staff\CourseAdministration\CourseAdministrationStaffGUI
  */
+
 class CourseAdministrationStaffGUI extends AbstractStaffGUI
 {
 
