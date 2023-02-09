@@ -66,14 +66,15 @@ class ComposerStaticInit1f66ff618ae087e5e6f7c3b525b7ece6
     );
 
     public static $classMap = array (
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'SrLpReportRemoveDataConfirm' => __DIR__ . '/../..' . '/classes/uninstall/class.SrLpReportRemoveDataConfirm.php',
         'ilSrLpReportConfigGUI' => __DIR__ . '/../..' . '/classes/class.ilSrLpReportConfigGUI.php',
         'ilSrLpReportPlugin' => __DIR__ . '/../..' . '/classes/class.ilSrLpReportPlugin.php',
         'ilSrLpReportUIHookGUI' => __DIR__ . '/../..' . '/classes/class.ilSrLpReportUIHookGUI.php',
         'srag\\ActiveRecordConfig\\SrLpReport\\ActiveRecordConfig' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfig.php',
+        'srag\\ActiveRecordConfig\\SrLpReport\\ActiveRecordConfigFactory' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfig.php',
         'srag\\ActiveRecordConfig\\SrLpReport\\ActiveRecordConfigFormGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfigFormGUI.php',
         'srag\\ActiveRecordConfig\\SrLpReport\\ActiveRecordConfigGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfigGUI.php',
+        'srag\\ActiveRecordConfig\\SrLpReport\\ActiveRecordConfigRepository' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfig.php',
         'srag\\ActiveRecordConfig\\SrLpReport\\ActiveRecordConfigTableGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfigTableGUI.php',
         'srag\\ActiveRecordConfig\\SrLpReport\\ActiveRecordObjectFormGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordObjectFormGUI.php',
         'srag\\ActiveRecordConfig\\SrLpReport\\Config\\AbstractFactory' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Config/AbstractFactory.php',
@@ -197,6 +198,7 @@ class ComposerStaticInit1f66ff618ae087e5e6f7c3b525b7ece6
         'srag\\Plugins\\SrLpReport\\Comment\\Ctrl\\ReportCtrl' => __DIR__ . '/../..' . '/src/Comment/Ctrl/class.ReportCtrl.php',
         'srag\\Plugins\\SrLpReport\\Config\\Config' => __DIR__ . '/../..' . '/src/Config/Config.php',
         'srag\\Plugins\\SrLpReport\\Config\\ConfigFormGUI' => __DIR__ . '/../..' . '/src/Config/ConfigFormGUI.php',
+        'srag\\Plugins\\SrLpReport\\Menu\\Menu' => __DIR__ . '/../..' . '/src/Menu/Menu.php',
         'srag\\Plugins\\SrLpReport\\Report\\AbstractReport2TableGUI' => __DIR__ . '/../..' . '/src/Report/AbstractReport2TableGUI.php',
         'srag\\Plugins\\SrLpReport\\Report\\AbstractReportGUI' => __DIR__ . '/../..' . '/src/Report/AbstractReportGUI.php',
         'srag\\Plugins\\SrLpReport\\Report\\AbstractReportTableGUI' => __DIR__ . '/../..' . '/src/Report/AbstractReportTableGUI.php',

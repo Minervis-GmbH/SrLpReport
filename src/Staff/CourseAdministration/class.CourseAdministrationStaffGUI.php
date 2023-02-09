@@ -16,6 +16,8 @@ use srag\Plugins\SrLpReport\Staff\AbstractStaffTableGUI;
  * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  *
  * @ilCtrl_isCalledBy srag\Plugins\SrLpReport\Staff\CourseAdministration\CourseAdministrationStaffGUI: srag\Plugins\SrLpReport\Staff\StaffGUI
+ * @ilCtrl_isCalledBy srag\Plugins\SrLpReport\Staff\CourseAdministration\CourseAdministrationStaffGUI: ilUIPluginRouterGUI, ilAdministrationGUI
+ * @ilCtrl_Calls srag\Plugins\SrLpReport\Staff\CourseAdministration\CourseAdministrationStaffGUI: ilUIPluginRouterGUI, ilAdministrationGUI
  * @ilCtrl_isCalledBy srag\CustomInputGUIs\SrLpReport\MultiSelectSearchNewInputGUI\OrgUnitAjaxAutoCompleteCtrl: srag\Plugins\SrLpReport\Staff\CourseAdministration\CourseAdministrationStaffGUI
  */
 class CourseAdministrationStaffGUI extends AbstractStaffGUI

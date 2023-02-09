@@ -54,7 +54,7 @@ final class Access {
             return true;
         }
 
-        return (self::version()->is6() ? ilMyStaffAccess::getInstance() : ilMyStaffAccess54::getInstance())->hasCurrentUserAccessToMyStaff();
+        return (self::version()->is6() || self::version()->is7() ? ilMyStaffAccess::getInstance() : ilMyStaffAccess54::getInstance())->hasCurrentUserAccessToMyStaff();
     }
 
 	public function hasCurrentUserAccessToLearningProgressInObject($csr_ref_id) {

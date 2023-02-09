@@ -10,6 +10,8 @@ use srag\Plugins\SrLpReport\Report\ConfigPerObject\ConfigPerObject;
 use srag\Plugins\SrLpReport\Staff\CourseAdministration\CourseAdministrationEnrollment;
 use srag\Plugins\SrLpReport\Utils\SrLpReportTrait;
 use srag\RemovePluginDataConfirm\SrLpReport\PluginUninstallTrait;
+use srag\Plugins\SrLpReport\Menu\Menu;
+use ILIAS\GlobalScreen\Provider\PluginProviderCollection;
 
 /**
  * Class ilSrLpReportPlugin
@@ -30,6 +32,10 @@ class ilSrLpReportPlugin extends ilUserInterfaceHookPlugin
      * @var self|null
      */
     protected static $instance = null;
+    /**
+     * @var PluginProviderCollection|null
+     */
+    protected static $pluginProviderCollection = null;
 
 
     /**
@@ -51,6 +57,8 @@ class ilSrLpReportPlugin extends ilUserInterfaceHookPlugin
     public function __construct()
     {
         parent::__construct();
+        $this->provider_collection = self::getPluginProviderCollection(); // Fix overflow
+        
     }
 
 
@@ -61,6 +69,19 @@ class ilSrLpReportPlugin extends ilUserInterfaceHookPlugin
     {
         AbstractCtrl::init();
     }
+        /**
+     * @return PluginProviderCollection
+     */
+    protected static function getPluginProviderCollection() : PluginProviderCollection
+    {
+        if (self::$pluginProviderCollection === null) {
+            self::$pluginProviderCollection = new PluginProviderCollection();
+            self::$pluginProviderCollection->setMainBarProvider(new Menu(self::dic()->dic(), self::plugin()->getPluginObject()));
+        }
+        return self::$pluginProviderCollection;
+    }
+
+
 
 
     /**
