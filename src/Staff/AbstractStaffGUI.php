@@ -46,6 +46,8 @@ abstract class AbstractStaffGUI
      */
     public function __construct()
     {
+        global $DIC;
+        $DIC['lng']->loadLanguageModule('trac');
 
     }
 
