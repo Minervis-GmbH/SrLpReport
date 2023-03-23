@@ -250,6 +250,7 @@ class CourseAdministrationTableGUI extends AbstractStaffTableGUI
     {
         $this->setSelectAllCheckbox(Reports::GET_PARAM_USR_ID);
         $this->addMultiCommand(CourseAdministrationStaffGUI::CMD_MULTI_ENROLL_SELECT, $this->txt("enroll"));
+        $this->addMultiCommand(CourseAdministrationStaffGUI::CMD_MULTI_SIGNOUT_SELECT, $this->txt("signout"));
     }
 
 
