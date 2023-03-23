@@ -30,6 +30,8 @@ class CourseAdministrationStaffGUI extends AbstractStaffGUI
     const CMD_MULTI_ENROLL_SELECT = "multiEnrollSelect";
     const ENABLE_CONFIG_KEY = Config::KEY_ENABLE_COURSE_ADMINISTRATION;
     const LANG_MODULE = "course_administration";
+    const CMD_MULTI_SIGNOUT = "multiSignout";
+    const CMD_MULTI_SIGNOUT_SELECT = "multiSignoutSelect";
 
 
     /**
@@ -48,6 +50,8 @@ class CourseAdministrationStaffGUI extends AbstractStaffGUI
             case self::CMD_SIGNOUT:
             case self::CMD_MULTI_ENROLL:
             case self::CMD_MULTI_ENROLL_SELECT:
+            case self::CMD_MULTI_SIGNOUT:
+            case self::CMD_MULTI_SIGNOUT_SELECT:
                 $this->{$cmd}();
                 break;
 
@@ -165,5 +169,51 @@ class CourseAdministrationStaffGUI extends AbstractStaffGUI
         ilUtil::sendSuccess($result, true);
 
         self::dic()->ctrl()->redirect($this, self::CMD_INDEX);
+    }
+/**
+     * @param int[] $usr_ids
+     *
+     * @return CourseAdministrationMultiSignoutSelectFormGUI
+     */
+    protected function getCourseAdministrationMultiSignoutSelectForm(array $usr_ids = []) : CourseAdministrationMultiSignoutSelectFormGUI
+    {
+        $form = new CourseAdministrationMultiSignoutSelectFormGUI($this, $usr_ids);
+
+        return $form;
+    }
+
+
+    /**
+     *
+     */
+    protected function multiSignoutSelect()/*:void*/
+    {
+        $usr_ids = filter_input(INPUT_POST, Reports::GET_PARAM_USR_ID, FILTER_DEFAULT, FILTER_FORCE_ARRAY);
+        if (!is_array($usr_ids)) {
+            $usr_ids = [];
+        }
+
+        $form = $this->getCourseAdministrationMultiSignoutSelectForm($usr_ids);
+
+        self::output()->output($form, true);
+    }
+
+
+    /**
+     *
+     */
+    protected function multiSignout()/*:void*/
+    {
+        $form = $this->getCourseAdministrationMultiSignoutSelectForm();
+
+        if (!$form->storeForm()) {
+            self::output()->output($form);
+
+            return;
+        }
+
+        $result = self::ilias()->staff()->courseAdministration()->signout($form->getUsrIds(), $form->getCrsObjIds());
+        ilUtil::sendSuccess($result, true);
+        ;self::dic()->ctrl()->redirect($this, self::CMD_INDEX); 
     }
 }

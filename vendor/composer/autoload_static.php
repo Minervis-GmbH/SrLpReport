@@ -221,6 +221,7 @@ class ComposerStaticInit1f66ff618ae087e5e6f7c3b525b7ece6
         'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministration' => __DIR__ . '/../..' . '/src/Staff/CourseAdministration/CourseAdministration.php',
         'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationEnrollment' => __DIR__ . '/../..' . '/src/Staff/CourseAdministration/CourseAdministrationEnrollment.php',
         'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationMultiEnrollSelectFormGUI' => __DIR__ . '/../..' . '/src/Staff/CourseAdministration/CourseAdministrationMultiEnrollSelectFormGUI.php',
+        'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationMultiSignoutSelectFormGUI' => __DIR__ . '/../..' . '/src/Staff/CourseAdministration/CourseAdministrationMultiSignoutSelectFormGUI.php',
         'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationStaffGUI' => __DIR__ . '/../..' . '/src/Staff/CourseAdministration/class.CourseAdministrationStaffGUI.php',
         'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationTableGUI' => __DIR__ . '/../..' . '/src/Staff/CourseAdministration/CourseAdministrationTableGUI.php',
         'srag\\Plugins\\SrLpReport\\Staff\\Courses\\Courses' => __DIR__ . '/../..' . '/src/Staff/Courses/Courses.php',

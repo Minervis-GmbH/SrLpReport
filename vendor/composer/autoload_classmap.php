@@ -161,6 +161,7 @@ return array(
     'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministration' => $baseDir . '/src/Staff/CourseAdministration/CourseAdministration.php',
     'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationEnrollment' => $baseDir . '/src/Staff/CourseAdministration/CourseAdministrationEnrollment.php',
     'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationMultiEnrollSelectFormGUI' => $baseDir . '/src/Staff/CourseAdministration/CourseAdministrationMultiEnrollSelectFormGUI.php',
+    'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationMultiSignoutSelectFormGUI' => $baseDir . '/src/Staff/CourseAdministration/CourseAdministrationMultiSignoutSelectFormGUI.php',
     'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationStaffGUI' => $baseDir . '/src/Staff/CourseAdministration/class.CourseAdministrationStaffGUI.php',
     'srag\\Plugins\\SrLpReport\\Staff\\CourseAdministration\\CourseAdministrationTableGUI' => $baseDir . '/src/Staff/CourseAdministration/CourseAdministrationTableGUI.php',
     'srag\\Plugins\\SrLpReport\\Staff\\Courses\\Courses' => $baseDir . '/src/Staff/Courses/Courses.php',
