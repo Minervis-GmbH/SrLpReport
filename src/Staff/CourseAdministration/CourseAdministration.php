@@ -8,6 +8,7 @@ use ILIAS\MyStaff\ListUsers\ilMStListUser;
 use ilMStListUsers as ilMStListUsers54;
 use ILIAS\MyStaff\ListUsers\ilMStListUsers;
 use ilObjCourse;
+use ilObjectNotFoundException;
 use ilObjUser;
 use ilOrgUnitUserAssignment;
 use ilSrLpReportPlugin;
@@ -260,7 +261,11 @@ final class CourseAdministration
             $this->courses_cache = [];
 
             foreach (Config::getField(Config::KEY_COURSE_ADMINISTRATION_COURSES) as $crs_obj_id) {
-                $this->courses_cache[$crs_obj_id] = new ilObjCourse($crs_obj_id, false);
+                try {
+                    $this->courses_cache[$crs_obj_id] = new ilObjCourse($crs_obj_id, false);
+                } catch (ilObjectNotFoundException $e) {
+                    continue;
+                }
             }
         }
 
